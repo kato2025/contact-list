@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Existing Contacts</title>
+</head>
+<body>
+    <h1>Existing Contacts</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone Number 1</th>
+                <th>Phone Number 2</th>
+                <th>Email</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% contacts.forEach(contact => { %>
+                <tr>
+                    <td><%= contact.id %></td>
+                    <td><%= contact.name %></td>
+                    <td><%= contact.phonenumber1 %></td>
+                    <td><%= contact.phonenumber2 %></td>
+                    <td><%= contact.email %></td>
+                    <td><%= contact.location %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

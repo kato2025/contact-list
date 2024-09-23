@@ -1,0 +1,195 @@
+:root {
+  --primary-color: #007bff;
+  --primary-color-hover: #0056b3;
+  --secondary-color: #f0f8ff;
+  --text-color: #333;
+  --border-color: #ddd;
+  --delete-color: red;
+  --font-family: Arial, sans-serif;
+  --button-radius: 5px;
+  --button-padding: 10px;
+  --max-container-width: 800px; /* Increased width for the table */
+  --form-bg-color: #ffffff;
+  --form-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* General body styling */
+body {
+  font-family: var(--font-family);
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+/*Style the logo */
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+/* Container styling */
+.container {
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--form-bg-color);
+  box-shadow: 0px 2px 10px var(--form-shadow);
+  border-radius: 10px;
+}
+
+/* Heading styling */
+h1 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+/* Contact table styling */
+.contact-table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures no space between table cells */
+  margin-bottom: 20px; /* Space below the table */
+}
+
+.contact-table th, .contact-table td {
+  padding: 10px;
+  border: 1px solid var(--border-color); /* Light border around cells */
+  text-align: left;
+}
+
+.contact-table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.contact-table tbody tr:hover {
+  background-color: var(--secondary-color); /* Highlight on row hover */
+}
+
+/* Buttons in the table */
+.edit-btn, .delete-btn {
+  padding: 4px 8px;
+  border-radius: var(--button-radius);
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+  transition: background-color 0.3s;
+}
+
+.edit-btn {
+  margin-right: 5px;
+  background-color: rgb(228, 230, 252);
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.delete-btn {
+  background-color: rgb(249, 197, 197);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: var(--delete-color);
+}
+
+/* Inline form for delete button */
+.inline-form {
+  display: inline-block;
+}
+
+/* Add contact button */
+.add-contact-btn {
+  display: inline-block;
+  padding: var(--button-padding);
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--button-radius);
+  transition: background-color 0.3s;
+}
+
+.add-contact-btn:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* Form styling */
+.message-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-form label {
+  margin-top: 15px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.message-form input {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: var(--button-radius);
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.message-form input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+/* Styling for the submit button */
+.submit-btn:hover, .cancel-btn:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* Styling for the edit and delete buttons */
+.inline-form {
+  display: flex;
+}
+
+/* Button styling */
+.submit-btn, .cancel-btn {
+  margin-top: 20px;
+  padding: var(--button-padding);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+/* Styling for the cancel button */
+.cancel-btn {
+  background-color: #f44336;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .contact-table th, .contact-table td {
+    padding: 10px;
+  }
+
+  .edit-btn, .delete-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
